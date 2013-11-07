@@ -37,8 +37,8 @@ Namespace arsflussi
                 roles = op.Data
 
                 ddlRuolo.DataSource = roles
-                ddlRuolo.DataValueField = "ID"
-                ddlRuolo.DataTextField = "Descrizione"
+                ddlRuolo.DataValueField = "Key"
+                ddlRuolo.DataTextField = "Value"
                 ddlRuolo.DataBind()
             Else
                 lblResult.Text = op.Message

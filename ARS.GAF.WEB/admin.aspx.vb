@@ -35,21 +35,59 @@ Namespace arsflussi
 
             If Not op.Success Then
                 lblMessage.Text = op.Message
-                ddlSelectOption.Enabled = False
-                ddlSelectOption.SelectedIndex = 0
+                
                 Return
             End If
 
         End Sub
 
 
-        Protected Sub ddlSelectOption_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlSelectOption.SelectedIndexChanged
+      
 
-            If ddlSelectOption.SelectedItem.Value = 1 Then
+        Protected Sub gridUtenti_RowCommand(sender As Object, e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles gridUtenti.RowCommand
+            Select Case e.CommandName
+                Case "AggiungiUtente"
+                    DetailsView.Visible = True
+                    gridUtenti.Visible = False
+                    DetailsView.ChangeMode(DetailsViewMode.Insert)
+                Case "EliminaUtente"
+                Case "ModificaUtente"
+                    Dim control As Control = DirectCast(e.CommandSource, Control)
+                    Dim selectedRow As GridViewRow = DirectCast(control.Parent.Parent, GridViewRow)
+                    gridUtenti.SelectedIndex = selectedRow.RowIndex
 
-                phContent.Controls.Add(LoadControl("UCAddUtente.ascx"))
+                    DetailsView.Visible = True
+                    gridUtenti.Visible = False
+                    DetailsView.ChangeMode(DetailsViewMode.Edit)
+                    DetailsView.DataBind()
+            End Select
+        End Sub
 
+        Protected Sub DetailsView_DataBound(sender As Object, e As System.EventArgs) Handles DetailsView.DataBound
+
+            If (DetailsView.CurrentMode = DetailsViewMode.Edit) Then
+                Dim ddlRoles As DropDownList = DetailsView.FindControl("ddlRoles")
+                If (Not ddlRoles Is Nothing) Then
+                    ddlRoles.SelectedIndex = ddlRoles.Items.IndexOf(ddlRoles.Items.FindByValue(DataBinder.Eval(DetailsView.DataItem,"CodiceRuolo").ToString()))
+                End If
+                Dim btnInsert As LinkButton = DetailsView.FindControl("btnInsert")
+                btnInsert.Visible = False
+                Dim btnEdit As LinkButton = DetailsView.FindControl("btnEdit")
+                btnEdit.Visible = True
             End If
+            If (DetailsView.CurrentMode = DetailsViewMode.Insert) Then
+                Dim btnInsert As LinkButton = DetailsView.FindControl("btnInsert")
+                btnInsert.Visible = True
+                Dim btnEdit As LinkButton = DetailsView.FindControl("btnEdit")
+                btnEdit.Visible = False
+            End If
+
+        End Sub
+
+        Protected Sub DetailsView_ItemUpdated(sender As Object, e As System.Web.UI.WebControls.DetailsViewUpdatedEventArgs) Handles DetailsView.ItemUpdated
+            DetailsView.Visible = False
+            gridUtenti.Visible = True
+            gridUtenti.DataBind()
         End Sub
     End Class
 End Namespace
