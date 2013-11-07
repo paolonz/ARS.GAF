@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "arsflussi", "http://localhost/arsflussi/arsflussi.vbproj", "{5108A2DC-F8F3-4323-8D91-51D696C0E50B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5108A2DC-F8F3-4323-8D91-51D696C0E50B}.Debug|Default.ActiveCfg = Debug|.NET
+		{5108A2DC-F8F3-4323-8D91-51D696C0E50B}.Debug|Default.Build.0 = Debug|.NET
+		{5108A2DC-F8F3-4323-8D91-51D696C0E50B}.Release|Default.ActiveCfg = Release|.NET
+		{5108A2DC-F8F3-4323-8D91-51D696C0E50B}.Release|Default.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

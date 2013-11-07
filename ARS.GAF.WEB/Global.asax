@@ -1,0 +1,1 @@
+<%@ Application Inherits="arsflussi.Global" Language="VB" %>

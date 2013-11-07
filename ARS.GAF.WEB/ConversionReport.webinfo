@@ -1,0 +1,60 @@
+﻿This report shows the steps taken to convert your Web application from ASP.NET 1.1 to ASP.NET 2.0. 
+There may be some unresolved conversion issues you will need to manually fix. 
+For more information, please refer to http://go.microsoft.com/fwlink/?LinkId=46995 or search for the help topic "Converting from Visual Studio .NET 2002 or 2003".
+Conversion Started on project file arsflussi.vbproj at July 10 2012, 09:55:47.
+
+=========================ERRORS===================
+
+=========================WARNINGS=================
+Warning: This web project was converted as a file-based web application. If your site contained any IIS meta-information, e.g. sub-folders marked as virtual directories, it is recommended that you close this web site and re-open it using the Open Web Site command and selecting the Local IIS tab.
+
+=========================COMMENTS=================
+Web.Config: Added 'xhtmlConformance' attribute.
+Removed attribute Codebehind from file admactivity.aspx.
+Access level of 'arsflussi.admactivity' changed to 'Partial' in file admactivity.aspx.vb (Line 3).
+Removed attribute Codebehind from file cactivity.aspx.
+Access level of 'arsflussi.cactivity' changed to 'Partial' in file cactivity.aspx.vb (Line 3).
+Removed attribute Codebehind from file checkflussi.aspx.
+Access level of 'arsflussi.checkflussi' changed to 'Partial' in file checkflussi.aspx.vb (Line 3).
+Removed attribute Codebehind from file Contatti.aspx.
+Access level of 'arsflussi.Contatti' changed to 'Partial' in file Contatti.aspx.vb (Line 3).
+Removed attribute Codebehind from file dactivity.aspx.
+Access level of 'arsflussi.dactivity' changed to 'Partial' in file dactivity.aspx.vb (Line 3).
+Removed attribute Codebehind from file default.aspx.
+Access level of 'arsflussi.WebForm1' changed to 'Partial' in file default.aspx.vb (Line 3).
+Removed attribute Codebehind from file Documentazione.aspx.
+Access level of 'arsflussi.Documentazione1' changed to 'Partial' in file Documentazione.aspx.vb (Line 3).
+Removed attribute Codebehind from file ErrorPage.aspx.
+Access level of 'arsflussi.ErrorPage' changed to 'Partial' in file ErrorPage.aspx.vb (Line 3).
+Removed attribute Codebehind from file Eventi.aspx.
+Access level of 'arsflussi.Eventi1' changed to 'Partial' in file Eventi.aspx.vb (Line 3).
+Added folder App_Code.
+Moved file GestoriFlussi.xsd to the App_Code\ directory.
+Renamed file App_Code\GestoriFlussi.xsd to file arsflussi.GestoriFlussi.xsd.
+Removed file GestoriFlussi.vb.
+Removed attribute Codebehind from file Global.asax.
+Removed attribute Codebehind from file iactivity.aspx.
+Access level of 'arsflussi.iactivity' changed to 'Partial' in file iactivity.aspx.vb (Line 5).
+Removed attribute Codebehind from file Login.aspx.
+Access level of 'arsflussi.Login' changed to 'Partial' in file Login.aspx.vb (Line 5).
+Removed attribute Codebehind from file Register.aspx.
+Access level of 'arsflussi.Register' changed to 'Partial' in file Register.aspx.vb (Line 5).
+Removed attribute Codebehind from file sactivity.aspx.
+Access level of 'arsflussi.sactivity' changed to 'Partial' in file sactivity.aspx.vb (Line 3).
+Removed attribute TargetSchema from file UClinks.ascx.
+Removed attribute Codebehind from file UClinks.ascx.
+Access level of 'arsflussi.UClinks' changed to 'Partial' in file UClinks.ascx.vb (Line 3).
+Removed attribute Codebehind from file Welcome.aspx.
+Access level of 'arsflussi.Welcome' changed to 'Partial' in file Welcome.aspx.vb (Line 3).
+Added folder App_Code\Components.
+Moved file Components\Docsinfo.vb to the App_Code\Components\ directory.
+Moved file Components\Referente.vb to the App_Code\Components\ directory.
+Moved file Components\Activity.vb to the App_Code\Components\ directory.
+Moved file Global.asax.vb to the App_Code\ directory.
+Moved file AssemblyInfo.vb to the App_Code\ directory.
+Moved file Components\Security.vb to the App_Code\Components\ directory.
+Removed file Bin\arsflussi.dll.
+Removed file Bin\arsflussi.pdb.
+Removed file arsflussi.vbproj.
+Removed file arsflussi.vbproj.webinfo.
+Project arsflussi.vbproj has been converted successfully at July 10 2012, 09:56:00.

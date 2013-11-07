@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestoriFlussi" targetNamespace="http://www.tempuri.org/GestoriFlussi.xsd" xmlns:mstns="http://www.tempuri.org/GestoriFlussi.xsd" xmlns="http://www.tempuri.org/GestoriFlussi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="GestoriFlussi" msdata:IsDataSet="true" msdata:Locale="it-IT">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T_Gestori">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="progrgestore" type="xs:int" />
+              <xs:element name="gestore" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="fax" type="xs:string" minOccurs="0" />
+              <xs:element name="email" type="xs:string" minOccurs="0" />
+              <xs:element name="dataini" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dataend" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_GestoriFlussi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="progrgesflussi" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="progrgestore" type="xs:int" />
+              <xs:element name="progrflusso" type="xs:int" />
+              <xs:element name="flusso" type="xs:string" />
+              <xs:element name="gestore" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:T_Gestori" />
+      <xs:field xpath="mstns:progrgestore" />
+    </xs:unique>
+    <xs:keyref name="GestoriFlussi" refer="Constraint1">
+      <xs:selector xpath=".//mstns:V_GestoriFlussi" />
+      <xs:field xpath="mstns:progrgestore" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
